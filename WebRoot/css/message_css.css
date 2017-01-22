@@ -1,0 +1,10 @@
+/* CSS Document for message page creator XuHailong*/
+.wrapped 
+{
+	margin: 5px;
+}
+
+.table th, .table td 
+{ 
+	text-align: center; 
+}

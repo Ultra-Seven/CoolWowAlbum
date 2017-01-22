@@ -1,0 +1,154 @@
+body {
+  padding: 0px !important;
+}
+div#main {
+  width: 80%;
+  margin-left: 10%;
+}
+div#line {
+  margin-top: 30px;
+  height: 2px;
+  background-color: #f1f1f1;
+  width: 100%;
+}
+div#register {
+  height: 50px;
+  background: url(../img/register.png) top center no-repeat;
+  margin-top: -26px;
+}
+div#left {
+  margin-left: 10%;
+  width: 30%;
+  height: 400px;
+  float: left;
+}
+div#middle {
+  margin-left: 10%;
+  width: 1px;
+  height: 350px;
+  background-color: #ddd;
+  float: left;
+}
+div#right {
+  width: 45%;
+  margin-top: 50px;
+  float: right;
+}
+img#foot {
+  width: 101.2%;
+  margin-left: -0.6%;
+}
+img#logo {
+  margin-bottom: -30px;
+}
+div#main-head {
+  margin-top: 55px;
+}
+div#information {
+  width: 70%;
+  margin-left: 20%;
+  margin-top: 40px;
+}
+
+input.btn.btn-primary {
+  width: 292px;
+  height:40px;
+  margin-top: 10px;
+}
+input#char {
+  margin-right: 6px;
+  margin-top: -1px;
+}
+
+
+
+nav a {
+	position: relative;
+	display: inline-block;
+	margin: 15px 25px;
+	outline: none;
+	color: black;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: bold;
+	text-shadow: 0 0 1px rgba(255,255,255,0.3);
+	font-size: 1.5em;
+	font-family: "Segoe Print";
+}
+
+nav a:hover,
+nav a:focus {
+	outline: none;
+	color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Effect 1: Brackets */
+.special a::before,
+.special a::after {
+	display: inline-block;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+	/* transition: transform 0.3s, opacity 0.2s; */
+}
+
+.special a::before {
+	margin-right: 10px;
+	content: '[';
+	-webkit-transform: translateX(20px);
+	-moz-transform: translateX(20px);
+	transform: translateX(20px);
+}
+
+.special a::after {
+	margin-left: 10px;
+	content: ']';
+	-webkit-transform: translateX(-20px);
+	-moz-transform: translateX(-20px);
+	transform: translateX(-20px);
+}
+
+.special a:hover::before,
+.special a:hover::after,
+.special a:focus::before,
+.special a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	transform: translateX(0px);
+}
+
+
+input#passwdQuestion {
+  height: 40px;
+  width: 65%;
+}
+input#passwdAnswer {
+  height: 40px;
+  width: 65%;
+}
+div#back {
+  margin-top: 63px;
+}
+.notice{
+	height:20px;
+	float:right;
+}
+#input2,#input3,#input4,#submit,#input5,#input6{
+	margin-top:40px;
+}
+fieldset#field1 {
+  width: 110%;
+}
+input#submit {
+  width: 100%;
+}
+form#registerForm {
+	width:100%;
+}
+fieldset#field2 {
+  width: 100%;
+}

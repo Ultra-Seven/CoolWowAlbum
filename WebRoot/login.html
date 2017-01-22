@@ -1,0 +1,318 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>酷我相册登录</title>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="css/login_css.css" rel="stylesheet"/>
+</head>
+
+<body style="OVERFLOW-X: hidden; ">
+<div class="wrapped">
+<!--rating modal's content-->
+	
+	<div class="header">
+		<div id="topbar">
+		</div>
+		<div class="title">
+			<img alt="logo" src="img/logo.png" id="logo" height="190px" width="190px"/>
+			<span class="dash" id="dash"></span>
+			<img alt="name" src="img/title.png" id="name" height="190px" width="190px"/>
+			<nav class="special2" id="other2">
+				<span><a href="register.jsp" data-hover="REGISTER">REGISTER</a></span>			</nav>
+		</div>
+	</div>
+	<div class="main">
+		<div id="main-head">
+			<div id="line"></div>
+			<div id="register"></div>
+		</div>
+		<div class="container-fluid">
+  			<div class="row-fluid">
+    			<div class="span2" id="left">
+      			<!--Sidebar content-->
+					<form action="user/userLogin.action" method="post" id="loginForm">
+					<div class="logPlace" id="logPlace">
+						<div class="acc">
+							<span class="img" id="account-img"></span><input type="text" placeholder="账号" class="input-form" id="account" name="u.account"/>
+						</div>
+						<div class="pass">
+							<span class="img" id="password-img"></span><input type="password" placeholder="密码" class="input-form" id="password" name="u.password"/>
+						</div>
+						<div class="check">
+							<span class="img" id="password-img"></span>
+							<input type="text" placeholder="验证码" class="input-form" id="checkCode"/>
+							<img src="user/image.action" id="checkImage">
+						</div>
+						<div class="extra" id="extra">
+							<a href="#ratyService4" class="extra-txt" id="extra1" data-toggle="modal" data-target="#ratyService4">忘记密码</a>
+							<a href="register.jsp" class="extra-txt" id="extra2">注册账号</a>
+						</div>
+						<input type="button" id="button" onclick="checkSubmit()" value="登录" class="btn btn-primary"/>
+					</div>
+					</form>	
+				</div>
+    			<div class="span10" id="right">
+      			<!--Body content-->
+					<div id="myCarousel" class="carousel slide" data-ride="carousel">
+       					<ol class="carousel-indicators">
+         					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+         					<li data-target="#myCarousel" data-slide-to="1"></li>
+         					<li data-target="#myCarousel" data-slide-to="2"></li>
+							<li data-target="#myCarousel" data-slide-to="3"></li>
+         					<li data-target="#myCarousel" data-slide-to="4"></li>
+       					</ol>
+       					<div class="carousel-inner">
+          					<div class="active item">
+								<img src="img/1.png" />
+								<div class="carousel-caption">
+              						<h4>First Thumbnail label</h4>
+              						<p></p>
+           						</div>
+							</div>
+          					<div class="item" >
+								<img src="img/2.png"/>
+								<div class="carousel-caption">
+              						<h4>Second Thumbnail label</h4>
+              						<p></p>
+           						</div>
+							</div>
+          					<div class="item" >
+								<img src="img/3.png"/>
+								<div class="carousel-caption">
+              						<h4>Third Thumbnail label</h4>
+              						<p></p>
+           						</div>
+							</div>
+          					<div class="item" >
+								<img src="img/4.png"/>
+								<div class="carousel-caption">
+              						<h4>Fourth Thumbnail label</h4>
+              						<p></p>
+           						</div>
+							</div>
+          					<div class="item" >
+								<img src="img/5.png"/>
+								<div class="carousel-caption">
+              						<h4>Fifth Thumbnail label</h4>
+              						<p></p>
+           						</div>
+							</div>
+       					</div>
+       					<a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
+       					<a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
+					</div>
+  				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div id="footer-background">
+			<nav class="special" id="other">
+				<span id="footbar1">
+					<a href="#ratyService" data-toggle="modal" data-target="#ratyService" data-hover="SUGGESTION">SUGGESTION</a>				</span>
+				<span id="footbar2">
+					<a href="#ratyService" data-toggle="modal" data-target="#ratyService" data-hover="REMARKS">REMARKS</a>				</span>
+				<span id="footbar3">
+					<a href="#ratyService" data-toggle="modal" data-target="#ratyService" data-hover="BUGREPORT">BUGREPORT</a>				</span>
+				<span id="footbar4">
+					<a href="#ratyService2" data-toggle="modal" data-target="#ratyService2" data-hover="STAFF">STAFF</a>				</span>
+				<span id="footbar5">
+					<a href="#ratyService3" data-toggle="modal" data-target="#ratyService3" data-hover="THANKS">THANKS</a>				</span>			</nav>
+		</div>
+		<div class="rights">
+			<p class="copyrightlinka"> Copyright © 1996 - 2015 Ultra-Seven Corporation,  All Rights Reserved</p>
+			<p class="linka"> 赛文公司  版权所有</p>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="js/loginPasswdUpdate.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<script>
+$('.carousel').carousel({
+  interval: 5000
+})
+</script>
+<div id="ratyService4" class="modal hide fade">    
+            <div class="modal-header">
+             		<button type="button" class="close" data-dismiss="modal">&times;</button>
+              		<h5>找回密码</h5>
+            	</div><!--Modal header-->
+            	<div class="modal-body2">
+             		<div class="row">
+            			<div  class="span1"></div>
+             			<div class="span4 ">
+             				<form id="myForm" method="post" action="user/passwdFind!userPasswdUpdate.action">
+              				<h5>请输入您的账号</h5>
+			  				<input type="text" placeholder="账号" class="input-form" id="account2" onKeyUp="InformationSubmit()" name="account" />
+			  				<h5 id="ajaxQuestion"></h5>
+			  				<input type="text" placeholder="密保答案" class="input-form" id="answer" onKeyUp="PasswdSubmit()" name="passwdAnswer" style="display: none;"/>
+			  				<input type="password" placeholder="请输入新密码" class="input-form" id="newPasswd" name="newpasswd" onKeyUp="HasValue()" style="display: none;"/>
+			  				</form>
+              			</div>
+              			<div  class="span4" id="ratingstar"  ></div>
+              			<div  class="span1" id="target"></div>
+           			</div>
+            	</div><!--Modal body-->
+            	<div class="modal-footer">
+              		<a id="submit" class="btn btn-primary" onClick="test()" data-dismiss="modal" style="display: none;">submit</a>
+              		<a href="login#other" class="btn" data-dismiss="modal" >close</a>
+            	</div><!--Modal footer-->
+          	</div> <!--Modal-->
+	<div id="ratyService" class="modal hide fade">      
+		<div class="modal-header">
+        	<button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h5>E-MAIL US</h5>
+        </div><!--Modal header-->
+            <div class="modal-body">
+             	<div class="row">
+            		<div  class="span1"></div>
+             		<div class="span4 ">
+              			<h5>电子邮件：14302010039@fudan.edu.cn</h5>
+						<h5>欢迎来信!</h5>
+              		</div>
+              		<div  class="span4" id="ratingstar"  ></div>
+           			<div  class="span1" id="target"></div>
+           		</div>
+            </div><!--Modal body-->
+           	<div class="modal-footer">
+           		<a href="login#other" class="btn" data-dismiss="modal" >Close</a>
+            </div><!--Modal footer-->
+	</div> <!--Modal-->
+ 	<div id="ratyService2" class="modal hide fade">      
+    	<div class="modal-header">
+        	<button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h5>STAFF</h5>
+        </div><!--Modal header-->
+        <div class="modal-body">
+            <div class="row">
+            	<div  class="span1"></div>
+            	<div class="span4 ">
+            		<h5>魏子耘，梁旭，许海龙，朱潇</h5>
+            	</div>
+            	<div  class="span4" id="ratingstar"  ></div>
+            	<div  class="span1" id="target"></div>
+           	</div>
+		</div><!--Modal body-->
+            <div class="modal-footer">
+              	<a href="login#other" class="btn" data-dismiss="modal" >Close</a>
+            </div><!--Modal footer-->
+ 	</div> <!--Modal-->
+ 	<div id="ratyService3" class="modal hide fade">      
+    	<div class="modal-header">
+          	<button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h5>THANKS</h5>
+      	</div><!--Modal header-->
+      	<div class="modal-body">
+           	<div class="row">
+            	<div  class="span1"></div>
+             	<div class="span4 ">
+              		<h5>THANK YOU FOR SUPPORTING US</h5>
+              	</div>
+              	<div  class="span4" id="ratingstar"  ></div>
+              	<div  class="span1" id="target"></div>
+           	</div>
+     	</div><!--Modal body-->
+       	<div class="modal-footer">
+      		<a href="login#other" class="btn" data-dismiss="modal" >Close</a>
+      	</div><!--Modal footer-->
+  	</div> <!--Modal-->
+  	<div id="ratyService5" class="modal hide fade">      
+		<div class="modal-header">
+        	<button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h5>修改密码结果</h5>
+        </div><!--Modal header-->
+            <div class="modal-body">
+             	<div class="row">
+            		<div  class="span1"></div>
+             		<div class="span4 ">
+              			<h5 id="outcome"></h5>
+              		</div>
+              		<div  class="span4" id="ratingstar"  ></div>
+           			<div  class="span1" id="target"></div>
+           		</div>
+            </div><!--Modal body-->
+           	<div class="modal-footer">
+           		<a href="login#other" class="btn" data-dismiss="modal" >Close</a>
+            </div><!--Modal footer-->
+	</div> <!--Modal-->
+	<div id="ratyService6" class="modal hide fade">      
+		<div class="modal-header">
+        	<button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h5>验证码</h5>
+        </div><!--Modal header-->
+            <div class="modal-body">
+             	<div class="row">
+            		<div  class="span1"></div>
+             		<div class="span4 ">
+              			<h5>验证码错误</h5>
+              		</div>
+              		<div  class="span4" id="ratingstar"  ></div>
+           			<div  class="span1" id="target"></div>
+           		</div>
+            </div><!--Modal body-->
+           	<div class="modal-footer">
+           		<a class="btn" data-dismiss="modal">Close</a>
+            </div><!--Modal footer-->
+	</div> <!--Modal-->
+	<div id="ratyService7" class="modal hide fade">      
+		<div class="modal-header">
+        	<button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h5>验证码</h5>
+        </div><!--Modal header-->
+            <div class="modal-body">
+             	<div class="row">
+            		<div  class="span1"></div>
+             		<div class="span4 ">
+              			<h5>验证码不可为空</h5>
+              		</div>
+              		<div  class="span4" id="ratingstar"  ></div>
+           			<div  class="span1" id="target"></div>
+           		</div>
+            </div><!--Modal body-->
+           	<div class="modal-footer">
+           		<a class="btn" data-dismiss="modal">Close</a>
+            </div><!--Modal footer-->
+	</div> <!--Modal-->
+	<div id="ratyService8" class="modal hide fade">      
+		<div class="modal-header">
+        	<button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h5>登陆受限</h5>
+        </div><!--Modal header-->
+            <div class="modal-body">
+             	<div class="row">
+            		<div  class="span1"></div>
+             		<div class="span4 ">
+              			<h5>您的账户已被封禁，请联系管理员解禁</h5>
+              		</div>
+              		<div  class="span4" id="ratingstar"  ></div>
+           			<div  class="span1" id="target"></div>
+           		</div>
+            </div><!--Modal body-->
+           	<div class="modal-footer">
+           		<a href="login#other" class="btn" data-dismiss="modal" >Close</a>
+            </div><!--Modal footer-->
+	</div> <!--Modal-->
+	<div id="ratyService9" class="modal hide fade">      
+		<div class="modal-header">
+        	<button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h5>登陆错误</h5>
+        </div><!--Modal header-->
+            <div class="modal-body">
+             	<div class="row">
+            		<div  class="span1"></div>
+             		<div class="span4 ">
+              			<h5>您的账号或密码输入错误!</h5>
+              		</div>
+              		<div  class="span4" id="ratingstar"  ></div>
+           			<div  class="span1" id="target"></div>
+           		</div>
+            </div><!--Modal body-->
+           	<div class="modal-footer">
+           		<a class="btn" data-dismiss="modal">Close</a>
+            </div><!--Modal footer-->
+	</div> <!--Modal-->
+</body>
+</html>

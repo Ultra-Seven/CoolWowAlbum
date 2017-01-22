@@ -1,0 +1,183 @@
+div#zxMain {
+  width: 60%;
+  margin-left: 20%;
+  height: auto;
+  margin-top:50px;
+  margin-bottom:150px;
+}
+div#addlist {
+  cursor: pointer;
+  float: right;	
+  color: white;
+  background-color: rgb(58, 127, 240);
+  height: 20px;
+  width: 80px;
+  font-size: 2px;
+}
+div.icon-plus.icon-white {
+  margin-left: 5%;
+  /* margin-bottom: 20px; */
+}
+div#friendlist {
+  clear: both;
+}
+ul.friend {
+  height: 76px;
+  padding-left: 5%;
+}
+li.friendPic {
+  margin-left: 1%;
+  margin-top: 8px;
+  height: 60px;
+  display: block;
+  width: 10%;
+  float: left;
+}
+li.friendName {
+  margin-left: 3%;
+  display: block;
+  float: left;
+  height: 100%;
+  width: 15%;
+  font-weight: bold;
+  font-family: 'Lato', Arial, sans-serif;
+  font-size:1.2em;
+  letter-spacing: 1px;
+}
+li.friendIntro {
+  margin-left: 3%;
+  width:40%;
+  display: block;
+  height: 100%;
+  float: left;
+  font-weight: bold;
+  font-family: 'Lato', Arial, sans-serif;
+  font-size:1em;
+  letter-spacing: 1px;
+}
+.positonBig {
+  margin-top: 29px;
+}
+.positionSmall {
+  margin-top: 29px;
+}
+div#friendtypelist {
+  clear: both;
+}
+li.friendTypeName {
+  display: block;
+  float: left;
+  font-weight: bold;
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  height: 30px;
+  margin-left:3%;
+  width: 15%;
+}
+li.friendTypeNumber {
+  display: block;
+  float: left;
+  font-weight: bold;
+  font-family: 'Lato', Arial, sans-serif;
+  letter-spacing: 1px;
+  height: 30px;
+  margin-left:5%;
+}
+.positonBigtwo {
+  margin-top: 6px;
+}
+ul.friendtype {
+  height: 30px;
+}
+li.friendManage {
+  margin-left: 3%;
+  width:20%;
+  display: block;
+  height: 100%;
+  float: left;
+  font-weight: bold;
+  font-family: 'Lato', Arial, sans-serif;
+  font-size:1em;
+  letter-spacing: 1px;
+}
+a.href{
+  cursor:pointer;
+  text-decoration:none;
+}
+a.ensure{
+  cursor:pointer;
+  text-decoration:none;
+  display:none;
+}
+a.no{
+  margin-left:20%;
+}
+div#undo {
+  display: none;
+}
+input#creat {
+  height: 30px;
+  width: 100%;
+}
+div#ratyService5 {
+  width: 30%;
+  left: 55%;
+  /* right: 35%; */
+}
+div#ratyService4 {
+  width: 30%;
+  left: 55%;
+  /* right: 35%; */
+}
+div#ratyService6 {
+  width: 30%;
+  left: 55%;
+  /* right: 35%; */
+}
+div#blank {
+  clear: both;
+  height: 10px;
+}
+.icon-pencil.pencil {
+  cursor:pointer;
+  margin-top: 10px;
+  margin-right: 20%;
+  float: right;
+}
+.icon-trash.trash {
+  cursor:pointer;
+  margin-top: 10px;
+  margin-right: 3%;
+  float: right;
+}
+.unsee{
+	display:none;
+}
+input#changeName {
+  width: 100%;
+  margin-top: 6px;
+  outline:none;
+  border:none;
+  display:none;
+}
+li.ensuretwo {
+  opacity:0.2;
+  display: none;
+  margin-left:-20%;
+  float: left;
+  width:10%
+}
+div#ok {
+  cursor:pointer;
+  margin-top: 5px;
+}
+div#remove {
+  margin-top: 5px;
+  margin-left:20%;
+  cursor:pointer;
+}
+a.tiaozhuanyemian {
+    text-decoration: none;
+    cursor: pointer;
+}

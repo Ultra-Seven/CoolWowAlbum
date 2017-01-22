@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+
+<struts>
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<package name="demo-default" extends="struts-default"
+		namespace="/user">
+		<!--user!userList.action  -->
+
+
+		<!-- 用于登录的action -->
+		<action name="userLogin" class="com.fudan2015.action.UserAction"
+			method="userLogin">
+			<result name="success" type="redirect">/index.jsp</result>
+			<result name="admin" type="redirectAction">admin!getUsers</result>
+		</action>
+		<!-- 用于注册的action -->
+		<action name="userRegist" class="com.fudan2015.action.UserAction" method="userRegist">
+			<result name="regist" type="redirect">/login.html</result>
+
+		</action>
+		<!-- 用于处理好友的action -->
+		<action name="friends" class="com.fudan2015.action.FriendAction">
+			<result name="get" type="redirect">/friendList.jsp</result>
+		</action>
+		<!-- 用于找回密码的action -->
+		<action name="passwdFind" class="com.fudan2015.action.UserAction"
+			method="userFindPasswd">
+		</action>
+		<!-- 用于管理员页面的action -->
+		<action name="admin" class="com.fudan2015.action.AdminAction">
+			<result name="success" type="redirect">/adminManage.jsp</result>
+		</action>
+		<!-- 用于分享页面的action -->
+		<action name="share" class="com.fudan2015.action.ShareAction">
+			<result name="success" type="redirect">/Share.jsp</result>
+			<result name="friends" type="redirect">/friendShare.jsp</result>
+		</action>
+		<!-- 用于验证码的action -->
+		<action name="image" class="com.fudan2015.action.VerificationAction">
+			<result name="success" type="stream">
+				<param name="inputName">inputStream</param>
+				<param name="bufferSize">2048</param>
+			</result>
+		</action>
+		<!-- 用于热门榜的action-->
+		<action name="index" class="com.fudan2015.action.HotAction">
+			<result name="success" type="redirect">/index.jsp</result>
+		</action>
+		<!-- 用于退出的action -->
+		<action name="logOff" class="com.fudan2015.action.AdminAction"
+			method="logOff">
+			<result name="logOff" type="redirect">/login.html</result>
+		</action>
+	</package>
+	<package name="photo-default" extends="struts-default"
+		namespace="/photo">
+		<!-- 用于加载可编辑图片的action -->
+		<action name="Editpic" class="com.fudan2015.action.showEditAction">
+			<result name="success" type="redirect">/showEdit.jsp</result>
+		</action>
+		<!-- 用于加载个人主页的action -->
+		<action name="photoLoad" class="com.fudan2015.action.PhotoAction"
+			method="photoLoad">
+			<result name="photoLoad" type="redirect">/myAlbum.jsp</result>
+			<result name="error" type="redirect">/index.jsp</result>
+		</action>
+		<!-- 用于的增加新相册action -->
+		<action name="photoAdd" class="com.fudan2015.action.PhotoAction">
+			<result name="success" type="redirectAction">photoLoad!photoLoad.action
+			</result>
+		</action>
+		<!-- 用于浏览相册内照片的action -->
+		<action name="photoView" class="com.fudan2015.action.PhotoAction"
+			method="photoView">
+			<result name="photoView" type="redirect">/myPhotos.jsp</result>
+			<result name="error" type="redirectAction">photoLoad!photoLoad.action</result>
+		</action>
+		<!--
+			用于照片看大图的action <action name="photoPPT"
+			class="com.fudan2015.action.PhotoAction" method="photoPPT"> <result
+			name="PPT" type="redirect">/showPics.jsp</result> <result
+			name="error"
+			type="redirectAction">photoLoad!photoLoad.action</result> </action>
+		-->
+		<!-- 用于添加相册的action -->
+		<action name="albumAdd" class="com.fudan2015.action.PhotoAction"
+			method="albumAdd">
+			<result name="albumAdd" type="redirectAction">photoLoad!photoLoad.action
+			</result>
+		</action>
+		<!-- 用于搜索的action -->
+		<action name="search" class="com.fudan2015.action.SearchAction"
+			method="photoView">
+			<result name="photoView" type="redirect">/searchResult.jsp</result>
+		</action>
+		<!-- 用于图片管理的action -->
+		<action name="managePhoto" class="com.fudan2015.action.PhotoAction"
+			method="managePhoto">
+			<result name="success" type="redirect">/management.jsp</result>
+		</action>
+		<!-- 用于幻灯片的action -->
+		<action name="supersized" class="com.fudan2015.action.PhotoAction"
+			method="supersized">
+			<result name="supersized" type="redirect">/supersized.jsp</result>
+		</action>
+
+	</package>
+	<package name="comment-default" extends="struts-default"
+		namespace="/comment">
+		<!-- 用于新增评论的action -->
+		<action name="newComment" class="com.fudan2015.action.CommentAction"
+			method="newComment">
+			<result name="newComment"></result>
+		</action>
+		<!-- 用于加载评论的action -->
+		<action name="commentLoad" class="com.fudan2015.action.CommentAction"
+			method="commentLoad">
+			<result name="commentLoad"></result>
+		</action>
+		<action name="deleteComment" class="com.fudan2015.action.CommentAction"
+			method="deleteComment">
+			<result name="commentLoad"></result>
+		</action>
+
+	</package>
+	<package name="default" namespace="/" extends="struts-default">
+		<action name="upload" class="com.fudan2015.action.UploadAction">
+			<param name="uploadDir">uploadFiles</param>
+		</action>
+		<action name="uploadView" class="com.fudan2015.action.UploadAction" method="albumView">
+			<result name="album" type="redirect">/upload.jsp</result>
+		</action>
+	</package>
+
+
+	<!--
+		必须继承json-default，可参阅struts2-json-plugin.jar包中struts-plugin.xml配置文件
+	-->
+	<package name="ajax" extends="json-default">
+		<action name="update" class="com.fudan2015.action.ManageAction"
+			method="json">
+			<result name="json" type="json" /><!-- type必须是json -->
+			<result name="input" type="json" /><!-- type必须是json -->
+		</action>
+		<action name="delete" class="com.fudan2015.action.ManageAction"
+			method="delete">
+			<result name="json" type="json" /><!-- type必须是json -->
+			<result name="input" type="json" /><!-- type必须是json -->
+		</action>
+		<action name="add" class="com.fudan2015.action.AlbumAction"
+			method="addAlbum">
+			<result name="add" type="json" /><!-- type必须是json -->
+			<result name="input" type="json" /><!-- type必须是json -->
+		</action>
+		<action name="shift" class="com.fudan2015.action.PhotoAction"
+			method="zoomPic">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="doodle-default" extends="struts-default"
+		namespace="/doodle">
+		<!-- doodle的action -->
+		<action name="doodleView" class="com.fudan2015.action.DoodleAction"
+			method="showWall">
+			<result name="wall" type="redirect">/doodleWall.jsp</result>
+		</action>
+		<action name="edit" class="com.fudan2015.action.FullDoodleAction"
+			method="full">
+			<result name="full" type="redirect">/doodle.jsp</result>
+		</action>
+		<action name="saveCanvas" class="com.fudan2015.action.CanvasAction"
+			method="saveCanvas">
+			<result name="saveCanvas"></result>
+		</action>
+
+	</package>
+
+	<!-- 看别人的action -->
+	<package name="other-default" namespace="/" extends="struts-default">
+		<action name="visit" class="com.fudan2015.action.VisitAction" method="visit">
+			<result name="visit" type="redirect">/myPhotos.jsp</result>
+			<result name="error" type="redirectAction">photoLoad!photoLoad.action</result>
+		</action>
+		<action name="return" class="com.fudan2015.action.VisitAction" method="returnMyAccount">
+			<result name="return" type="redirectAction">photo/photoLoad!photoLoad.action</result>
+		</action>
+	</package>
+	<!-- 只做理解 -->
+
+   <!-- user control panel action and message action created by XuHailong-->
+   <package name="ucp" extends="struts-default" namespace="/ucp">
+  	 <action name="ucp" class="com.fudan2015.action.UcpAction">
+  		 <result name="login" type="redirect">/login.html</result>
+   		 <result name="ucp">/ucp.jsp</result>
+   		 <result name="success" type="redirectAction">
+      		<param name="actionName">ucp.action</param>
+       		<param name="inf">suc</param>
+   		 </result>
+   		 <result name="wrong" type="redirectAction">
+      		<param name="actionName">ucp.action</param>
+       		<param name="inf">wrg</param>
+   		 </result>
+   		 <result name="refresh" type="chain">ucp</result>
+   	 </action>
+   </package> 
+   
+   <package name="msg" extends="struts-default" namespace="/msg">
+  	 <action name="msg" class="com.fudan2015.action.MsgAction">
+  		 <result name="login" type="redirect">/login.html</result>
+   		 <result name="msg">/message.jsp</result>
+   		 <result name="success" type="chain">msg</result>
+   		 <result name="refresh" type="redirectAction">
+      		<param name="actionName">msg.action</param>
+       		<param name="inf">suc</param>
+   		 </result>
+   		 <result name="invalid" type="redirectAction">
+      		<param name="actionName">msg.action</param>
+       		<param name="inf">inv</param>
+   		 </result>
+   	 </action>
+   </package> 
+
+
+</struts>

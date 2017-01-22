@@ -1,0 +1,97 @@
+nav a {
+	position: relative;
+	display: inline-block;
+	margin: 15px 25px;
+	outline: none;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 400;
+	text-shadow: 0 0 1px rgba(255,255,255,0.3);
+	font-size: 1.35em;
+}
+nav a:hover,nav a:focus {
+	outline: none;
+	text-decoration: none;
+}
+
+.special a {
+	padding: 10px 0;
+	border-top: 2px solid #0972b4;
+	color: #0972b4;
+	text-shadow: none;
+} 
+
+.special a::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	padding: 10px 0;
+	max-width: 0;
+	border-bottom: 2px solid #fff;
+	color: #fff;
+	content: attr(data-hover);
+	-webkit-transition: max-width 0.5s;
+	-moz-transition: max-width 0.5s;
+	transition: max-width 0.5s;
+}
+
+.special a:hover::before,
+.special a:focus::before {
+	max-width: 100%;
+}
+
+div#footer-background {
+  background: #0e83cd;
+  height: 140px;
+}
+span#footbar1 {
+  margin-left: 10%;
+}
+span#footbar2 {
+  margin-left: 5%;
+}
+span#footbar3 {
+  margin-left: 5%;
+}
+span#footbar4 {
+  margin-left: 5%;
+}
+span#footbar5 {
+  margin-left: 5%;
+}
+.footer {
+  margin-top: -2px;
+}
+p {
+  color: #0972b4;
+  font-size: 5px;
+  margin: 0 0 0px;
+}
+.modal.fade.in {
+  top: 25%;
+}
+div#ratyService {
+  width: 30%;
+  left: 55%;
+  /* right: 35%; */
+}
+.modal-body {
+  text-align: center;
+}
+div#ratyService2 {
+  width: 30%;
+  left: 55%;
+  /* right: 35%; */
+}
+div#ratyService3 {
+  width: 30%;
+  left: 55%;
+  /* right: 35%; */
+}
+.rights {
+  text-align: center;
+  margin-top: -60px;
+}

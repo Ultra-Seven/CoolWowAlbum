@@ -1,0 +1,44 @@
+/* CSS Document for ucp page creator XuHailong*/
+.wrapped 
+{
+	margin: 5px;
+}
+
+.table th, .table td 
+{ 
+	text-align: center; 
+}
+
+.male
+{
+	color: blue;
+}
+
+.female
+{
+	color: pink;
+}
+
+#genderIcon
+{
+	margin-left: 4px;
+	font-weight: bold;
+	font-size: 18px;
+	font-family: Tahoma;
+}
+
+#profiletext
+{
+	text-align: left;
+	text-indent: 2em;
+}
+
+.red
+{
+	color: red;
+}
+
+.green
+{
+	color: green;
+}

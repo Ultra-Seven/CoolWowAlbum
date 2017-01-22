@@ -1,0 +1,285 @@
+ol,ul {
+	list-style: none;
+}
+
+.clear {
+	clear: both !important;
+	float: none !important;
+	margin: 0px !important;
+	padding: 0px !important;
+	height: 0px !important;
+	width: 0px !important
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+.picinfo {
+	border-bottom: 1px solid #101010;
+	overflow: hidden;
+	white-space: normal;
+	padding: 10px 20px;
+	height: 120px;
+}
+
+.user-info {
+	padding-top: 10px;
+	overflow: hidden;
+}
+
+.user-info .portrait {
+	float: left;
+	margin-right: 8px;
+}
+
+.user-info .portrait .img {
+	width: 48px;
+	height: 48px;
+	vertical-align: middle;
+	border: 1px solid #fff;
+}
+
+.user-info .name {
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.name a {
+	color: #0885d0;
+}
+
+.user-info .source {
+	color: #999;
+}
+
+.picinfo .pic-name {
+	font-size: 12px;
+	font-weight: 400;
+	padding: 5px 0;
+	line-height: 18px;
+	color: #afafaf;
+	display: inline-block;
+	word-break: break-all;
+	white-space: normal;
+}
+
+.picinfo .single-pic-modify-name {
+	font-size: 12px;
+	font-weight: 400;
+	padding: 5px 0;
+	line-height: 18px;
+	color: #fff;
+	display: inline-block;
+	word-break: break-all;
+	position: relative;
+	opacity: .8;
+}
+
+.comment-container {
+	width: 300px;
+	height: 520px;
+	float: right;
+	position: relative;
+	white-space: normal;
+	background-color: #262626;
+	border-top: 1px solid #252525;
+	border-bottom: 1px solid #101010;
+}
+
+/*.single-comment-title */
+.single-comment-title {
+	padding: 10px 0 8px;
+	position: relative;
+	z-index: 2;
+	color: #bfbfbf;
+	padding-left: 20px;
+	background-color: #1d1d1d;
+}
+
+.single-comment-title .comment,.singlePicBox .single-comment-title .view
+	{
+	margin-right: 20px;
+}
+
+.single-comment-title .arr {
+	position: absolute;
+	left: 24px;
+	bottom: -1px;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	border-width: 0 6px 6px;
+	border-style: solid;
+	border-color: #1d1d1d #1d1d1d #262626;
+}
+
+/*.single-comment-title */
+.single-comment-more {
+	position: relative;
+	padding-left: 20px;
+	border-bottom: 1px solid #1d1d1d;
+}
+
+.single-comment-more a {
+	padding-left: 20px;
+	display: block;
+	height: 26px;
+	line-height: 26px;
+	color: #a9a9a9;
+}
+
+.single-comment-more .arr {
+	position: absolute;
+	left: 20px;
+	top: 50%;
+	margin-top: -3px;
+	display: inline-block;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	border-width: 0 6px 6px;
+	border-style: solid;
+	border-color: #262626 #262626 #afafaf;
+	vertical-align: middle;
+	margin-right: 5px;
+	color: #0885d0;
+}
+
+/*single-comment-list */
+.single-comment-list {
+	overflow: hidden;
+}
+
+.single-comment-list li {
+	border-bottom: 1px solid #1d1d1d;
+	list-style: none outside none;
+	padding: 0 20px;
+}
+
+.single-comment-list .comment-list-item {
+	padding: 12px 0 8px;
+	zoom: 1;
+}
+
+.single-comment-list li img {
+	width: 30px;
+	height: 30px;
+	text-align: right;
+	float: left;
+	margin-right: 10px;
+}
+
+.single-comment-list .comment-list-item div {
+	padding-right: 12px;
+	position: relative;
+	top: -2px;
+}
+
+.single-comment-list .comment-list-item div a {
+	color: #165b85;
+}
+
+.single-comment-list .comment-list-item div strong {
+	float: left;
+	margin-right: 4px;
+}
+
+.single-comment-list blockquote {
+	color: #afafaf;
+	word-wrap: break-word;
+	word-break: normal;
+	line-height: 18px;
+}
+
+.single-comment-list cite {
+	height: 22px;
+	line-height: 22px;
+	color: #505050;
+	font-style: normal;
+}
+
+.single-comment-list cite span {
+	margin-right: 4px;
+	font-size: 13px;
+	float: left;
+}
+
+.single-comment-list .comment-list-item div a {
+	color: #165b85;
+}
+
+.delete-comment {
+	font-size: 13px;
+	position: relative;
+	
+}
+
+.single-comment-list li .delete {
+	padding-left: 4px;
+	background: 0 0;
+}
+
+.single-comment-list .comment-list-item div a {
+	color: #165b85;
+}
+
+/*single-comment-submit */
+.single-comment-submit {
+	padding: 7px 0;
+	overflow: hidden;
+	position: relative;
+	top: -1px;
+	z-index: 1;
+}
+
+.single-comment-submit-input {
+	position: relative;
+	padding-left: 20px;
+	overflow: hidden;
+}
+
+.focus .single-comment-submit-input textarea {
+	color: #000;
+	background: #dadada;
+	height: 48px;
+	overflow: auto;
+}
+
+.single-comment-submit-op {
+	position: relative;
+	height: 30px;
+	padding: 8px 20px 0;
+	
+}
+
+.single-comment-submit-op .submit {
+	margin-right: 10px;
+	color: #fff;
+}
+
+.cancel {
+	color: #666;
+}
+
+.single-comment-submit-input textarea {
+	color: #555;
+	background: #dadada;
+	padding: 5px;
+	border: 1px solid #000;
+	width: 220px;
+	height: 48px;
+	resize: none;
+	font-size: 12px;
+	overflow: auto;
+	vertical-align: top;
+}
